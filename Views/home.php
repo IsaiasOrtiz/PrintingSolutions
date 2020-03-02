@@ -3,7 +3,7 @@
 	include "../Layaut/Nav.php";
 	seccion1();
 	nav();
-
+  //Douglas Valle-Universidad Tecnoligica de El Salvador.
 ?>
 
 <div class="container col-md-12" style="background-image: url('/PrintingSolutions/img/img.jpg');width: 100%; height: 100%; "  >
