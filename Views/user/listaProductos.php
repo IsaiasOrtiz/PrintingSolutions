@@ -36,7 +36,7 @@
                     <td><table>
                     <tr>
                     <td>
-                    <IMG SRC='".$us['imagen']."' ALT='img' width='125px' height='auto'>
+                    <IMG SRC='../".$us['imagen']."' ALT='img' width='125px' height='auto'>
                     </td>
                     <td>
                     <B>ID:</B>".$us['idservicios']."
@@ -51,9 +51,9 @@
                     </br>
                      <B>Agregado por:</B>".$us['usuario']."
                     </br>
-                    	<a href='editarServicio.php?id=".$us['idservicios']."' class='btn btn-primary'>Editar</a>
+                    	<a href='editarProducto.php?id=".$us['idservicios']."' class='btn btn-primary'>Editar</a>
                     
-                    	<a href='../../Controllers/EliminarServicio.php?id=".$us['idservicios']."' class='btn btn-danger'>Eliminar</a>
+                    	<a href='../../Controllers/EliminarProducto.php?id=".$us['idservicios']."' class='btn btn-danger'>Eliminar</a>
                     </td>
                     </tr>
                     </table></td>

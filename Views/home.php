@@ -1,4 +1,5 @@
 <?php 
+  header("Location: /PrintingSolutions");
 	include "../Layaut/Layaut.php";
 	include "../Layaut/Nav.php";
 	seccion1();

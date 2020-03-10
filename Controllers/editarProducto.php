@@ -2,15 +2,20 @@
 include "session.php";
 
 if (isset($_POST['txtNombre']) && isset($_POST['txtDescripcion']) && isset($_POST['txtPrecio']) &&  isset($_POST['cbxServicio'])) {
-	$directorio="../Img/server/";
-	if (!subir_fichero("../Img/server/","txtImagen")) {
-		header("Location: ../views/404.php");
-	}else{
-		header("location: ../Views/user/listaProductos.php");
-	}
+    require_once "../Models/conection.php";
+    $sql="UPDATE servicios SET nombre=:nombre, descripcion=:descripcion ,precio=:precio, idservicio=:servicio, idusuario=:usuario WHERE idservicios=:id;";
+
+    $consulta=$pdo->prepare($sql);
+    $consulta->bindParam(':nombre',$_POST['txtNombre']);
+    $consulta->bindParam(':descripcion',$_POST['txtDescripcion']);
+    $consulta->bindParam(':precio',$_POST['txtPrecio']);
+    $consulta->bindParam(':servicio',$_POST['cbxServicio']);
+    $consulta->bindParam(':usuario',$_SESSION['id']);
+    $consulta->bindParam(':id',$_POST['txtId']);
+    $consulta->execute();
+    header("location: ../Views/user/listaProductos.php");
 	
 } 
-
 
 
 
