@@ -4,7 +4,7 @@ include "session.php";
 if (isset($_POST['txtNombre']) && isset($_POST['txtDescripcion']) && isset($_POST['txtPrecio']) &&  isset($_POST['cbxServicio'])) {
 	$directorio="../Img/server/";
 	if (!subir_fichero("../Img/server/","txtImagen")) {
-		header("Location: ../views/404.php");
+		header("Location: ../Views/404.php");
 	}else{
 		header("location: ../Views/user/listaProductos.php");
 	}
@@ -36,6 +36,7 @@ function subir_fichero($directorio_destino, $nombre_fichero)
             if (move_uploaded_file($tmp_name, $directorio_destino . '/' . $img_file))
             {
             	require_once "../Models/conection.php";
+            	$directorio_destino="Img/server/";
             	$urlImg=$directorio_destino.$img_file;
             	$sql="INSERT INTO servicios VALUES (null,:nombre, :descripcion, :precio, :imagen, :servicio, :usuario);";
             	$consulta=$pdo->prepare($sql);

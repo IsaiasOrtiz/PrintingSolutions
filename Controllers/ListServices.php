@@ -1,5 +1,5 @@
 <?php 
-	require_once "../models/conection.php";
+	require_once "../Models/conection.php";
 	include "session.php";
 	
 

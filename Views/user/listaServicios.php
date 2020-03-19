@@ -17,7 +17,7 @@
 
           
           <?php 
-            require_once "../../models/conection.php";
+            require_once "../../Models/conection.php";
             $sql="SELECT * FROM servicio";
             $consulta = $pdo->prepare($sql);
             $consulta->execute();

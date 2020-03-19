@@ -2,7 +2,7 @@
  session_start();
  
 if (!$_SESSION["correo"]) {
-   header("Location: /PrintingSolutions/views");
+   header("Location: /public_html/Views");
 }else{
    
 }
@@ -11,7 +11,7 @@ function nav()
  
 	echo " <nav class='navbar navbar-expand-lg navbar-light bg-light'>
   <a class='navbar-brand' href='#'>
-   <img src='/PrintingSolutions/Img/logo3.png'/  width='100px'>
+   <img src='/public_html/Img/logo3.png'/  width='100px'>
   </a>
   <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarNavDropdown' aria-controls='navbarNavDropdown' aria-expanded='false' aria-label='Toggle navigation'>
     <span class='navbar-toggler-icon'></span>
@@ -38,6 +38,18 @@ function nav()
           <a class='dropdown-item' href='listaProductos.php'>Lista de productos o servicios</a>
           <a class='dropdown-item' href='crearProducto.php'>Crear producto o servicio</a>
         </div>
+        
+      </li>
+      <li class='nav-item dropdown'>
+        <a class='nav-link dropdown-toggle' href='#' id='navbarDropdownMenuLink' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
+          Usuarios
+        </a>
+        <div class='dropdown-menu' aria-labelledby='navbarDropdownMenuLink'>
+          <a class='dropdown-item' href='listaUsuarios.php'>Lista Usuarios</a>
+          <a class='dropdown-item' href='nuevoUsuario.php'>Crear Usuario</a>
+           <a class='dropdown-item' href='nuevaClave.php'>Cambiar mi Clave</a>
+        </div>
+        
       </li>
       <li class='nav-item'>
         <a class='nav-link' href='salir.php'>Salir</a>

@@ -1,6 +1,6 @@
 <?php
 	//session_start();
-	require_once "../models/conection.php";
+	require_once "../Models/conection.php";
 	include "session.php";
 	$nombre=$_POST['txtNombre'];
 	$sql="INSERT INTO `printingsolutions`.`servicio` (`idservicio`, `nombre`) VALUES ('', :nombre);";

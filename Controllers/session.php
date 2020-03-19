@@ -5,7 +5,7 @@
 if ($_SESSION["correo"]) {
    
 }else{
-   header("Location: /PrintingSolutions/views");
+   header("Location: /public_html");
 }
 
 ?>

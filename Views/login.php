@@ -1,6 +1,7 @@
 <?php 	
 	include "../Layaut/Layaut.php";
 	include "../Layaut/Nav.php";
+  include "session2.php";
 	seccion1();
 	nav();
 ?>
@@ -13,7 +14,7 @@
 
                 </div>
                  <br>	
-                <form class="col-12" action="../controllers/log.php" method="POST">
+                <form class="col-12" action="../Controllers/log.php" method="POST">
                     <div class="form-group" id="user-group">
                         <input type="text" class="form-control" placeholder="Nombre de usuario" name="username"/>
                     </div>

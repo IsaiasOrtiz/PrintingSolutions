@@ -44,10 +44,6 @@
     <input type="number" min="0.01" step="0.01" max="100000" name="txtPrecio" class="form-control is-invalid" id="validationTextarea" placeholder="5.50" required>
   </div>
   <div class="mb-3">
-    <label for="validationTextarea">Imagen:</label>
-    <input type="file"  name="txtImagen"  accept="image/*" id="validationTextarea" required>
-  </div>
-  <div class="mb-3">
     <select name="cbxServicio" class="form-control is-invalid" id="validationTextarea" placeholder="Seleccione" required>
 
    <?php 

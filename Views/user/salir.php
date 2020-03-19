@@ -2,5 +2,5 @@
 session_start();
 session_destroy();
 $_SESSION=array();
-header("Location: /printingsolutions/views");
+header("Location: /public_html/Views");
 ?>

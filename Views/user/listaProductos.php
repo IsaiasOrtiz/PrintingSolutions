@@ -18,7 +18,7 @@
 
           
           <?php 
-            require_once "../../models/conection.php";
+            require_once "../../Models/conection.php";
             $sql="select t.*, t2.nombre 'nombre2'  , u.nombre 'usuario' from servicios t inner join servicio t2 on t.idservicio=t2.idservicio inner join usuarios u on u.idusuarios=t.idusuario";
             $consulta = $pdo->prepare($sql);
             $consulta->execute();
@@ -36,7 +36,7 @@
                     <td><table>
                     <tr>
                     <td>
-                    <IMG SRC='../".$us['imagen']."' ALT='img' width='125px' height='auto'>
+                    <IMG SRC='../../".$us['imagen']."' ALT='img' width='125px' height='auto'>
                     </td>
                     <td>
                     <B>ID:</B>".$us['idservicios']."

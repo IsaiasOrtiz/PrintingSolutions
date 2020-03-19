@@ -18,25 +18,6 @@ function nav()
       <li class='nav-item active'>
         <a class='nav-link' href='home.php'>Inicio<span class='sr-only'>(current)</span></a>
       </li>
-      <li class='nav-item dropdown'>
-        <a class='nav-link dropdown-toggle' href='#' id='navbarDropdownMenuLink' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
-          Servicios
-        </a>
-        <div class='dropdown-menu' aria-labelledby='navbarDropdownMenuLink'>
-        ";
-        while ($services=$consulta->fetch()) {
-    echo "<a class='dropdown-item' href='#'>".$services['nombre']."</a>";
-        }
-    
-          
-       echo " </div>
-      </li>
-      <li class='nav-item'>
-        <a class='nav-link' href='#'>Contactanos</a>
-      </li>
-      <li class='nav-item'>
-        <a class='nav-link' href='login.php'>Login</a>
-      </li>
     </ul>
   </div>
 </nav>";
